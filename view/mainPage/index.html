@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Login JavaScript Example</title>
+    <meta charset="UTF-8">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        let fname = null;
+        let receive = null;
+        //get the user details when the form load and  display it on the UI
+        window.addEventListener('load', function() {
+
+
+
+                $.ajax({
+                    type: "GET",
+                    //
+                    url: "/controller/asd",
+                    success: function(response) {
+                        console.log('data: ', response);
+                        console.log(response.lastName );
+                        receive = response;
+//                        fname = response.firstName;
+                        console.log(fname)
+                        document.getElementById("pictureUrl").innerHTML = response.pictureUrl;
+
+                        document.getElementById("name").innerHTML = response.firstName + " " + response.lastName;
+                        document.getElementById("industry").innerHTML = "industry: "+response.industry;
+                        document.getElementById("headline").innerHTML = "headline: "+response.headline;
+
+                        document.getElementById("publicProfileUrl").innerHTML ="Public Profile Url: "+ response.publicProfileUrl;
+                        document.getElementById("pictureUrl").src = response.pictureUrl;
+
+
+
+                    },
+                    error: function () {
+                    }
+                });
+
+        })
+        let x ="hi"
+//        var fn = document.getElementById("a");
+//        fn.value(fname)
+//        document.getElementById("a").value(x);
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+
+                <div class="card hovercard">
+                    <div class="cardheader">
+
+                    </div>
+                    <div class="avatar" >
+                        <img alt="" id ="pictureUrl">
+                    </div>
+                    <div class="info">
+                        <div class="title" id="name">
+                            <a target="_blank" href="https://scripteden.com/" ></a>
+                        </div>
+                        <div class="desc" id="industry"></div>
+                        <div class="desc" id="headline"></div>
+
+                        <div class="desc" id="publicProfileUrl"></div>
+                    </div>
+                    <div class="bottom">
+                        <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-danger btn-sm" rel="publisher"
+                           href="https://plus.google.com/+ahmshahnuralam">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a class="btn btn-primary btn-sm" rel="publisher"
+                           href="https://plus.google.com/shahnuralam">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="common/jquery/jquery-3.2.1.min.js"></script>
+</body>
+<!--<script >-->
+    <!--var xhr = new XMLHttpRequest();-->
+
+<!--</script>-->
+<script>
+
+</script>
+
+</html>

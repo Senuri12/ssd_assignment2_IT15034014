@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linkedin Example</title>
+</head>
+<!--
+direct you to the signing page of LinkedIn or if logged in allow access page
+-->
+<script type="text/javascript">
+    function requestUrl() {
+        const url = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=81l2pjudy6ex02&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcall-Back-To-Signin&state=123456&scope=r_basicprofile';
+        window.location.replace(url);
+    }
+</script>
+<body>
+<button onclick="requestUrl()">Login to Linkedin </button>
+</body>
+</html>

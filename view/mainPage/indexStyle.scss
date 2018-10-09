@@ -1,0 +1,194 @@
+@import "compass/css3";
+
+/*---Variables---*/
+$cardBorderR: 14px;
+$softShadow: 0 10px 26px rgba(120, 137, 150, 0.3);
+$cardFontSize: 0.95em;
+$cardLineHeight: 3.2em;
+
+/*---Colors---*/
+$white: #fff;
+$black: #000;
+
+html{
+  background-color: #edeeee;
+}
+
+.ProfileCardContainer {
+  position: relative;
+  margin-left: 20%;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-name: avatar;
+  animation-name: avatar;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+}
+
+.ProfileCardAvatar {
+  background: url('https://raw.github.com/stahlfest/Valf-Profilecard/master/avatar.jpg');
+  height: 13em;
+  width: 13em;
+  border-radius: 105px;
+  border: solid 1px #8c8c8c;
+  box-shadow: $softShadow;
+  margin-left: 3em;
+
+}
+
+@keyframes avatar {
+  from {
+    margin-top: -1em;
+    transform: rotateX(-70deg);
+  }
+
+  38%{
+    transform: rotateX(30deg);
+  }
+
+  50%{
+    transform: rotateX(10deg);
+  }
+
+  70%{
+    transform: rotateX(14deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+@-moz-keyframes avatar {
+  from {
+    margin-top: -1em;
+    -moz-transform: rotateX(-70deg);
+  }
+
+  38%{
+    margin-top: 0;
+    -moz-transform: rotateX(30deg);
+  }
+
+  50%{
+    -moz-transform: rotateX(10deg);
+  }
+
+  70%{
+    -moz-transform: rotateX(14deg);
+  }
+
+  to {
+    -moz-transform: rotateX(0deg);
+  }
+}
+
+@-webkit-keyframes avatar {
+  from {
+    margin-top: -1em;
+    -webkit-transform: rotateX(-70deg);
+  }
+
+  38%{
+    margin-top: 0;
+    -webkit-transform: rotateX(30deg);
+  }
+
+  50%{
+    -webkit-transform: rotateX(10deg);
+  }
+
+  70%{
+    -webkit-transform: rotateX(14deg);
+  }
+
+  to {
+    -webkit-transform: rotateX(0deg);
+  }
+}
+
+.ProfileCardTop {
+  margin-top: 1.7em;
+  width: 18.75em;
+  height: 76px;
+}
+
+.ProfileCardName{
+  position: absolute;
+  width: 18.75em;
+  margin-top: 2.76em;
+  text-align: center;
+  color: $white;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 -1px 0 #333;
+  letter-spacing: 0.07em;
+}
+
+.ProfileCardBox {
+  width: 18.75em;
+  height: 20.625em;
+  margin-top:-0.9em;
+  background-color: $white;
+  box-shadow: $softShadow;
+  border-bottom-left-radius: $cardBorderR;
+  border-bottom-right-radius: $cardBorderR;
+}
+
+.ProfileCardTextTitle {
+  float: left;
+  margin: .1em 0 0 -1em;
+  width: 2.5em;
+  list-style: none;
+  font-family: Arial, sans-serif;
+  font-size: $cardFontSize;
+  line-height: $cardLineHeight;
+  text-align: right;
+  color: #686b6b;
+}
+
+.ProfileCardJob {
+  margin-bottom: 2.7em;
+}
+
+.ProfileCardText {
+  margin-left: 3.2em;
+  padding-top: 0.1em;
+  list-style: none;
+  font-family: Arial, sans-serif;
+  font-size: $cardFontSize;
+  line-height: $cardLineHeight;
+  color: #adb1b2;
+
+  span {
+    display: block;
+    line-height: 1.35em;
+    margin: -1em 0 0.8em 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #adb1b2;
+  }
+
+}
+
+.ProfileCardBorder {
+  border-bottom: solid 1px #dacfc0;
+  width: 10em;
+}
+
+.ProfileCardTwitter {
+  background: url("https://raw.github.com/stahlfest/Valf-Profilecard/master/twitter.png") no-repeat;
+  background-position: 1em;
+  color: transparent;
+}
+
+.ProfileCardPlace {
+  background: url("https://raw.github.com/stahlfest/Valf-Profilecard/master/place.png") no-repeat;
+  background-position: 1.3em;
+  color: transparent;
+}
