@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="plunker">
+<head>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <script type="text/javascript" charset="utf-8">
+        var tags = [{"name": "some json"}];
+    </script>
+
+</head>
+<body>
+
+<div ng-controller="AppController">
+    tags: {{tags | json}}
+    <ul>
+        <li ng-repeat="tag in tags">{{tag.name}}</li>
+    </ul>
+</div>
+
+<div>
+    <ul ng-init="tags = [{name: 'some json'}]">
+        <li ng-repeat="tag in tags">{{tag.name}}</li>
+    </ul>
+</div>
+
+</body>
+</html>
